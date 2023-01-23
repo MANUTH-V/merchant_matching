@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: aba_merchant_matching_app
+    ports:
+      - "8000:8000"
+    networks:
+      - default
+    volumes:
+      - .:/app
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=mydb
+      - RUN_EVERY_MINUTES=60
+

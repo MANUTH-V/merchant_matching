@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+fastapi_utils
+mysql
+mysql-connector-python
+tqdm
+rapidfuzz
+pandas
+numpy
